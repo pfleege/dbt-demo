@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: ics-gcp-dbt-demo
+    schema: dbt_pfleege
+    tables:
+      - name: customers
+      - name: orders
