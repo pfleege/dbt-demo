@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: a clone of a Postgres application database
     database: ics-gcp-dbt-demo
     schema: dbt_pfleege
     freshness: 
@@ -14,5 +15,7 @@ sources:
     
     tables:
       - name: customers
+        description: raw customers data
         freshness: null
       - name: orders
+        description: raw orders data
