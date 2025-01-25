@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: a clone of a Postgres application database
+    database: ics-gcp-dbt-demo
+    schema: dbt_pfleege
+    freshness: 
+      error_after:
+        count: 2
+        period: day
+      warn_after:
+        count: 1
+        period: day
+    
+    tables:
+      - name: customers
+        description: raw customers data
+        freshness: null
+      - name: orders
+        description: raw orders data
